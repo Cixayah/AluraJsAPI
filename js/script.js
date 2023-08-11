@@ -6,7 +6,7 @@ async function buscaEndereco(cep) {
     try {
         // Faz uma requisição assíncrona para a API ViaCEP
         const consultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-        
+
         // Verifica se a resposta não foi bem-sucedida
         if (!consultaCEP.ok) {
             throw new Error('Erro ao consultar CEP. Por favor, tente novamente.');
